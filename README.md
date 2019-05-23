@@ -77,3 +77,24 @@ from your PC, eg:
     $ ./tools/pyboard.py /dev/ttyACM0 examples/conway.py
 
 Be brave! Break things! Learn and have fun!
+
+注：编译环境搭建好，编译时碰到：
+ fails to link with arm-none-eabi/lib/crt0.o: Conflicting CPU architectures 12/1 错误
+ 问题解决参考：https://github.com/bbcmicrobit/micropython/issues/514
+ 解决办法：
+  下载这两个库：
+  libnewlib-dev_3.0.0.20180802-2_all.deb
+  https://packages.ubuntu.com/cosmic/all/libnewlib-dev/download
+
+  libnewlib-arm-none-eabi_3.0.0.20180802-2_all.deb
+  https://packages.ubuntu.com/cosmic/all/libnewlib-arm-none-eabi/download
+  并安装：
+  sudo dpkg -i libnewlib-dev_3.0.0.20180802-2_all.deb
+  sudo dpkg -i libnewlib-arm-none-eabi_3.0.0.20180802-2_all.deb
+
+  构造散列表：
+  新增的模块、函数、变量名需要加构造
+  被加入散列表的名称，预先被放在\inc\microbit\qstrdefsport.h（跟平台相关的名称被放在这里）及\inc\py\qstrdefs.h（平台无关的名称放在这里）中。
+  用户新境的名称通常放在qstrdefs.h中，需用户一一添加。
+  1、修改后，在项目目录下，执行：./tools/makeqstrhdr.sh
+     或make  make all？

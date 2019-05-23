@@ -469,3 +469,56 @@ Q(group)
 Q(RATE_250KBIT)
 Q(RATE_1MBIT)
 Q(RATE_2MBIT)
+/*my port*/
+//module
+Q(bluebit)
+Q(set_mode)
+//mp3	
+Q(mp3_init)
+Q(mp3_play)
+Q(mp3_stop)
+Q(mp3_volume)
+//1602lcd
+Q(lcd_init)
+Q(lcd_set_cursor)
+Q(lcd_print)
+Q(lcd_clear)
+Q(lcd_cmd)
+//ultrasonic
+Q(get_distance)
+//4*7 seg display
+Q(tm1650_init)
+Q(tm1650_print)
+Q(tm1650_clear)
+//color sensor
+Q(get_color)
+//i/o extend
+Q(extIO_mode)
+Q(extIO_read)
+Q(extIO_write)
+//midi
+Q(midi_init)
+Q(midi_set_volume)
+Q(midi_set_instrument)
+Q(midi_note)
+//matrix
+Q(matrix_init)
+Q(matrix_print)
+Q(matrix_draw_bmp)
+Q(matrix_draw_pixel)
+Q(matrix_clear)
+Q(matrix_show)
+//ntc temperature
+Q(get_ntc_temp)
+//sht20
+Q(get_sht20_temp)
+Q(get_sht20_humi)
+//Ambient Light Sensor
+Q(get_bh1750_light)
+//pwm chip
+Q(pca9685_init)
+Q(pca9685_dc_motor)
+Q(pca9685_servo)
+Q(pca9685_set_pwm)
+Q(pca9685_step_motor)
+

@@ -118,6 +118,7 @@ extern const struct _mp_obj_module_t audio_module;
 extern const struct _mp_obj_module_t speech_module;
 extern const struct _mp_obj_module_t utime_module;
 extern const struct _mp_obj_module_t machine_module;
+extern const struct _mp_obj_module_t bluebit_module;
 
 #define MICROPY_PORT_BUILTIN_MODULES \
     { MP_ROM_QSTR(MP_QSTR_microbit), MP_ROM_PTR(&microbit_module) }, \
@@ -133,6 +134,7 @@ extern const struct _mp_obj_module_t machine_module;
     { MP_ROM_QSTR(MP_QSTR_speech), MP_ROM_PTR(&speech_module) }, \
     { MP_ROM_QSTR(MP_QSTR_utime), MP_ROM_PTR(&utime_module) }, \
     { MP_ROM_QSTR(MP_QSTR_machine), MP_ROM_PTR(&machine_module) }, \
+    { MP_ROM_QSTR(MP_QSTR_machine), MP_ROM_PTR(&bluebit_module) }, \
     \
     /* the following provide aliases for existing modules */ \
     { MP_ROM_QSTR(MP_QSTR_collections), MP_ROM_PTR(&mp_module_collections) }, \
